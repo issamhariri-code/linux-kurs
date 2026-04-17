@@ -1,0 +1,11 @@
+Övningsuppgift 2.1
+Open Source = Står för att källkoden är öppen, andra kan modifiera, läsa och dela
+den.
+Fri mjukvara = Innebär frihet, fokus ligger på att användaren kan köra programmet
+studera det, modifiera och sprida vidare förbättrade versioner.
+Övningsuppgift 2.2
+För att installera ett paket med apt använder man kommandot:
+sudo apt install <paketnamn>
+Svar: Ja det kräver root privilegier eftersom man gör ändringar i systemet när sudo
+används. Vid kommandot krävs oftast lösenordsverifiering.
+Övningsuppgift 2.3
