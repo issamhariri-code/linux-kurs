@@ -1,0 +1,19 @@
+Övningsuppgift 4.1
+logga in på servern med kommando: ssh server > sudo adduser beaver > kontrollera med
+id beaver > testa inloggning: ssh -p 2222 beaver@localhost > skapa nyckelpar för beaver >
+ssh-keygen -t ed25519 -f ~/.ssh/id_ed25519_beaver > passphrase: LoveRivers > 
+kontrollera med ls -l ~/.ssh/id_ed25519_beaver* > kopiera nyckeln till beaver med:
+> ssh-copyid -i ~/.ssh/id_ed25519_beaver -p beaver@localhost > lägg till beaver i config
+nano ~/.ssh/config (lägg in hostname,port,user,identity) > starta ssh agenten med:
+eval "$(ssh-agent -s)" kör sen > ssh-add ~/.ssh/id_ed25519_beaver > LoveRivers >
+kör sedan ssh server-beaver > inloggning lyckas när agenten sparar key (inget lösen)
+agenten måste startas innan man kör ssh-add.
+Övningsuppgift 4.2
+För capybara följs samma metod som med Beaver skillnaden är att capybara pekar på en fil
+som ligger i en mapp med authorized key ~/upg4_2/id_rsa_capybara 
+Övningsuppgift 4.3
+Öppnar configen med nano ~/.ssh/config lägger in capybara med hostname,port,user,identity
+sparar configen. startar ssh agenten med eval "$(ssh-agent -s)" sedan kör jag:
+ssh-add ~/upg4_2/id_rsa_capybara > passphrase > exit > ssh server-capybara > klar
+inloggad nu utan att skriva lösen endast om man startar agent och skickar key till agent
+Övningsuppgift 4.4
