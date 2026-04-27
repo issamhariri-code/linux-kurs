@@ -42,4 +42,16 @@ skickar sedan med > scp -r testkatalog server-beaver:
 > värddatorn: scp -r server-beaver:testkatalog .
 > -r (rekursivt för mapp med innehåll)
 Övningsuppgift 4.7
-
+uptime (visar hur länge servern varit igång) körde uptime på värddatorn
+och serven för att jämföra
+Övningsuppgift 4.8
+ssh server < upg4_8 för att köra scriptet till servern.
+får sedan output för ubsrv,uptime,free,ip-adress
+Övningsuppgift 4.9
+På servern ska man (ubsrv) öppna configen med kommando:
+sudo nano /etc/ssh/sshd_config 
+ändra PasswordAuthentication, PermitRootLogin, KbdInteractiveAuthentication
+till no. Ta även bort # framför.
+sedan sudo sshd -t därefter sudo systemctl restart ssh
+Viktig notis. Urskilja på servern/värddatorn så configen endast görs 
+inne på servern inte på configen. Enkelt att missa.
